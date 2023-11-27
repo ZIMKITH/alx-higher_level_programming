@@ -1,16 +1,2 @@
-#!/usr/bin/env python3
-
-import os
-
-pyfile_path = os.environ.get('PYFILE')
-
-if pyfile_path is None:
-    print("Error: PYFILE environment variable is not set.")
-    exit(1)
-
-if not os.path.isfile(pyfile_path):
-    print(f"Error: Python file not found: {pyfile_path}")
-    exit(1)
-
-os.system(f"python3 {pyfile_path}")
-
+#!/bin/bash
+python3 $PYFILE
