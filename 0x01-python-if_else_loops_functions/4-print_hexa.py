@@ -2,5 +2,6 @@
 # 4-print_hexa.py
 
 """Print numbers 0 to 98 in decimal and hexadecimal."""
-for i in range(99):
-    print(f"{i:2d} = {hex(i)}")
+i = 0
+for i in range(0, 99):
+    print("{} = {}".format(i, hex(i)))
