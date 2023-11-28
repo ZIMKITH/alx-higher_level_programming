@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * insert_node - Functions to be  inserted in the node.
- * @head: ENTRANCE of the pointer
- * @number: added
- * Return: All linked list
+ * insert_node - Fucn inserts node into sorted linked list
+ * @head: list start pointer
+ * @number: number to add
+ * Return: Sorted linked list
  */
 listint_t *insert_node(listint_t **head, int number)
 {
