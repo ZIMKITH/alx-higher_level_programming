@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-# 3-infinite_add.py
+# 4-hidden_discovery.py
 
-"""Print result of addition of all arguments"""
-
+"""Print all names defined by compiled module hidden_4.pyc"""
 
 if __name__ == "__main__":
-    import sys
-    total = 0
-    for i in range(len(sys.argv) - 1):
-        total += int(sys.argv[i + 1])
-    print("{}".format(total))
+    import hidden_4
+
+    for name in dir(hidden_4):
+        if not name.startswith("__"):
+            print(name)
