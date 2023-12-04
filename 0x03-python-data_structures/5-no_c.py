@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-# 4-new_in_list.py
+# 5-no_c.py
 
-def new_in_list(my_list, idx, element):
-    """Replace element at a specific position in the original list"""
-    new_list = my_list[:]
-    if 0 <= idx < len(my_list):
-        new_list[idx] = element
-    return new_list
+def no_c(my_string):
+    """Remove all 'c' and 'C' characters from the string"""
+    new_string = "".join(char for char in my_string if char.lower() != 'c')
+    return new_string
