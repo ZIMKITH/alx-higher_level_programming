@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-# 2-uniq_add.py
+# 1-search_replace.py
 
-def uniq_add(my_list=[]):
-    """Add all unique integers in list."""
-    return sum(set(my_list))
+def search_replace(my_list, search, replace):
+    """Replaces all occurrences of element by another in new list"""
+    return [replace if x == search else x for x in my_list]
