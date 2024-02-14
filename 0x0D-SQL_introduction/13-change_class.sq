@@ -1,2 +1,3 @@
--- Query to remove all records with a score <= 5 in the table second_table in MySQL server
-DELETE FROM second_table WHERE score <= 5;
+-- displays the average temperature by city ordered by temperature (descending)
+
+SELECT city, AVG(value) AS avg_temp FROM temperatures GROUP BY city ORDER BY avg_temp DESC;
