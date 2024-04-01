@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 """
-Take in URL, send request to URL and display
-X-Request-Id value in response header.
+Take in a URL, send request to the URL, display
+the HTTPS response body.
 """
 
 
 if __name__ == '__main__':
     from sys import argv
-    from requests import post
+    from requests import get
 
     url = argv[1]
-    email = argv[2]
-    res = post(url, {'email': email})
-    print(res.text)
+
+    response = get(url)
+    ERR_TXT = 'Error code: {}'
+    status = response.status_code
+    print(ERR_TXT.format(status) if (status >= 400) else response.text)
